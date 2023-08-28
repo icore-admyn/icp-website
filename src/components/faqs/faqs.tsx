@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import globalStyles from '../../app/styles/global.module.css'
 import classNames from 'classnames';
 import AccordionItem from './accordionH3';

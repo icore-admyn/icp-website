@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import styles from './faqs.module.css'
 import globalStyles from '../styles/global.module.css'
 import classNames from 'classnames';
