@@ -1,0 +1,80 @@
+.header {
+    padding-bottom: 0px
+}
+
+.section {
+    padding-top: 40px;
+}
+
+.heroWrapper {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+  }
+
+.cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.card {
+    padding: 60px;
+    background-color: var(--neutral150);
+    border-radius: 8px;
+}
+
+.card>h2 {
+    margin-top: 0px;
+    font-size: 1.8em;
+}
+
+.contactInfo {
+    margin-bottom: 40px;
+}
+
+.form {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px;
+}
+
+.formWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+@media (max-width: 1100px) {
+
+    .flexMobile{
+        flex-direction: column;
+    }
+        
+    .width100Mobile {
+        max-width: 100%;
+    }
+
+    .cardWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .formWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card{
+        padding: 40px;
+    }
+}

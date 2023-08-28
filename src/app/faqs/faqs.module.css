@@ -1,0 +1,11 @@
+.section {
+    padding-bottom: 0px;
+}
+
+.faqs {
+    padding-top: 0px;
+}
+
+.accordion > div > button > h2{
+    font-size: 1.3em;
+}

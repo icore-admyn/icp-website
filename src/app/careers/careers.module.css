@@ -1,0 +1,46 @@
+.section {
+    padding-bottom: 0px;
+}
+
+.careers {
+    padding-top: 0px;
+}
+
+.job {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--neutral300);
+    padding: 20px 0px;
+}
+
+.jobText {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 360px;
+    justify-content: space-between;
+}
+
+.whiteText{
+    color: var(--neutral1000);
+}
+
+.jobWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .jobText {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: auto;
+    }
+
+    .job {
+        align-items: center;
+    }
+}

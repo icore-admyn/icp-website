@@ -1,0 +1,58 @@
+{
+    "hero": {
+        "title": "Instant & Secure ",
+        "titleBlue": "Permissionless Payments",
+        "description": "Say goodbye to delays, complications, and limitations. Say hello to instant, secure, and permissionless payments that redefine the way businesses transact."
+    },
+    "section1": {
+        "title": "Revolutionising Transactions with ",
+        "titleBlue": "Instant & Secure Payments",
+        "description": "Our mission is simple: to empower businesses of all sizes with cutting-edge solutions that drive growth, customer satisfaction, and financial freedom.",
+        "card1": {
+            "title":"Blockchain Security:",
+            "description": "Built on the proven cryptographic security of Bitcoin networks. Using BUX a Bitcoin-based self-minted eToken."
+        },
+        "card2": {
+            "title":"Permissionless Payments:",
+            "description": "Funds are received in your own non-custodial wallet. There is no account signup or review required."
+        },
+        "card3": {
+            "title":"Instant Settlement:",
+            "description": "Payments are settled instantly to the merchants wallet ensuring that your business operations flow seamlessly."
+        }
+    },
+    "section2": {
+        "title": "Why ",
+        "titleBlue": "iCore Pay?",
+        "description": "Merchants can eliminate the work, cost, and insecurity associated with other payment systems.",
+        "usp1": {
+            "title":"Seamless Integration",
+            "description": "No long integration schedules, our lightweight API can be integrated within 24 hours."
+        },
+        "usp2": {
+            "title":"Multi-Recipient",
+            "description": "Pay multiple commissions, affiliates, and partners simultaneously with every payment."
+        },
+        "usp3": {
+            "title":"Global Payments",
+            "description": "Accept major credit cards along with local payment methods to each worldwide customers."
+        },
+        "usp4": {
+            "title":"Risk Free Setup",
+            "description": "No setup fee, monthly fee – or any hidden fees! Implement alongside your other payment options."
+        },
+        "usp5": {
+            "title":"Reduce Overheads",
+            "description": "Eliminate the time and expense with accounting and payment distribution, since everyone is paid instantly."
+        },
+        "usp6": {
+            "title":"Increase Revenue",
+            "description": "Reach previously unavailable jurisdiction's whilst reducing costs and increasing conversion."
+        }
+    },
+    "section3": {
+        "title": "Instant & Secure ",
+        "titleBlue": "Permissionless Payments",
+        "description": ""
+    }
+}

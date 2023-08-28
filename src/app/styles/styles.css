@@ -1,0 +1,189 @@
+@import 'normalize.css';
+@import 'typeface-oxygen';
+@import 'typeface-overpass';
+@import './colors.css';
+
+:root {
+    font-family: oxygen;
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: var(--neutral100);
+    color: var(--neutral800);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: overpass;
+    font-weight: 600;
+    color: var(--neutral1000);
+    margin-block-start: 20px;
+    margin-block-end: 10px;
+    line-height: 1.15
+}
+
+p {
+    font-size: inherit;
+    line-height: 1.5
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+a {
+    color: var(--primary500);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary600);
+    text-decoration: underline;
+}
+
+button {
+    border-radius: 4px;
+    border: 1px solid var(--primary500);
+    background-color: var(--primary500);
+    color: var(--neutral1000);
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: ease 200ms;
+}
+
+button:hover {
+    border: 1px solid var(--primary600);
+    background-color: var(--primary600);
+    transition: ease 200ms;
+    transform: translateY(-5px);
+
+}
+
+button>a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+button>a:hover {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+section {
+    padding-top: 160px;
+    padding-bottom: 120px;
+}
+
+footer {
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+input {
+    box-sizing: border-box;
+    border: 0px;
+    border-bottom: 1px solid var(--neutral300);
+    background: var(--neutral150);
+    padding: 18px 24px;
+    color: var(--neutral1000);
+    width: 100%;
+    min-width: 200px;
+    margin-top: 10px;
+}
+
+textarea {
+    box-sizing: border-box;
+    border: 0px;
+    border-bottom: 1px solid var(--neutral300);
+    background: var(--neutral150);
+    padding: 12px 18px;
+    color: var(--neutral1000);
+    width: 100%;
+    min-width: 200px;
+    min-height: 200px;
+    margin-top: 10px;
+}
+
+label {
+    background-color: var(--neutral150);
+    margin-bottom: 10px;
+}
+
+code {
+    background-color: var(--neutral940);
+    padding: 3px;
+    border-radius: 4px;
+}
+
+.button {
+    position: relative;
+    padding: 12px 0px;
+}
+
+.button>a {
+    padding: 12px 18px;
+    cursor: pointer;
+
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        line-height: 1.15
+    }
+
+    p {
+        font-size: inherit;
+        line-height: 1.5
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+
+    section {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+}
