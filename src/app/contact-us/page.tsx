@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import FAQs from '../../components/faqs/faqs'
 import Link from 'next/link';
 import dotenv from 'dotenv';
+import Form from '@/components/contactForm/form';
 dotenv.config();
 
 const url = process.env.BASE_URL
@@ -14,12 +15,9 @@ async function getData() {
   return res.json()
 }
 
-
 export default async function AboutUs() {
   const response = await getData()
   const data = response.data.attributes;
-
-  console.log(data)
 
   return (
     <>
@@ -73,42 +71,7 @@ export default async function AboutUs() {
               <div className={styles.contactInfo} dangerouslySetInnerHTML={{ __html: data.address || "" }}></div>
               <div dangerouslySetInnerHTML={{ __html: data.phone || '' }}></div>
             </div>
-            <form className={classNames(globalStyles.card, styles.form)}>
-              <div className={styles.formWrapper}>
-                <div className={globalStyles.inputWrapper}>
-                  <label htmlFor="first-name">First Name:<span className={globalStyles.redText}>*</span></label>
-                  <input id='first-name' type='text' required></input>
-                </div>
-                <div className={globalStyles.inputWrapper}>
-                  <label htmlFor="last-name">Last Name:<span className={globalStyles.redText}>*</span></label>
-                  <input id='last-name' type='text' required></input>
-                </div>
-                <div className={globalStyles.inputWrapper}>
-                  <label htmlFor="name">Email:<span className={globalStyles.redText}>*</span></label>
-                  <input id='email' type='email' required></input>
-                </div>
-                <div className={globalStyles.inputWrapper}>
-                  <label htmlFor="name">Phone:</label>
-                  <input id='phone' type='phone'></input>
-                </div>
-                <div className={globalStyles.inputWrapper}>
-                  <label htmlFor="company">Company:<span className={globalStyles.redText}>*</span></label>
-                  <input id='company' type='text' required></input>
-                </div>
-                <div className={globalStyles.inputWrapper}>
-                  <label htmlFor="role">Role:<span className={globalStyles.redText}>*</span></label>
-                  <input id='role' type='text' required></input>
-                </div>
-                <div className={classNames(
-                  globalStyles.inputWrapper,
-                  globalStyles.areaWrapper
-                )}>
-                  <label htmlFor="message">Message:<span className={globalStyles.redText}>*</span></label>
-                  <textarea id='message' required></textarea>
-                </div>
-                <button className={globalStyles.formButton} type='submit'>Send Message</button>
-              </div>
-            </form>
+            <Form />
           </div>
         </section>
         <FAQs />

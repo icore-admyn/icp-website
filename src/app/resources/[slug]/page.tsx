@@ -16,7 +16,7 @@ export default function ResourceRoute({ params }: any) {
                     globalStyles.container,
                     globalStyles.alignCenter
                 )}>
-                    <h1>{error.status}</h1>
+                    <h1 className={styles.h1404}>{error.status}</h1>
                     <div dangerouslySetInnerHTML={{ __html: error.message }}></div>
                 </div>
             </section>

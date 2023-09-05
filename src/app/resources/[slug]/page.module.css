@@ -17,6 +17,10 @@
     font-size: 2.2em;
 }
 
+.h1404 {
+    color: var(--neutral100);
+}
+
 .title {
     position: sticky;
     top: 70px;

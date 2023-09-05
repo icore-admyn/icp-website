@@ -2,6 +2,7 @@ import './styles/styles.css'
 import type { Metadata } from 'next'
 import Navbar from '../components/navbar/navbar'
 import Footer from '../components/footer/footer'
+import Cookies from '@/components/cookies/cookies'
 
 export default function RootLayout({
   children,
@@ -14,6 +15,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Cookies />
       </body>
     </html>
   )

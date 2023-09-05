@@ -4,10 +4,11 @@ import styles from './footer.module.css'
 import globalStyles from '../../app/styles/global.module.css'
 import getMenuData from '../navbar/menuFetch'
 import Link from 'next/link'
-import getContactDetails from './getContactData'
+import { getContactDetails, getPolicyMenu } from './getData'
 
 export default async function Footer() {
     const footerArray = await getMenuData();
+    const policyArray = await getPolicyMenu();
     const contactRes = await getContactDetails();
 
     return (
@@ -45,9 +46,18 @@ export default async function Footer() {
                                 </div>
                             )
                         })}
-                        <div>
-                            <p><strong></strong></p>
+                        <div className={styles.menu}>
+                            <p><strong>Policies</strong></p>
                             <ul>
+                                {policyArray.map((policy: any, index: any) => {
+                                    return (
+                                        <li key={index}>
+                                            <Link href={policy.attributes?.url} target={policy.attributes?.target}>
+                                                    {policy.attributes?.title}
+                                                </Link>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
                     </div>

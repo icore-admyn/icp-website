@@ -5,10 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import admynScreenshot from '../../public/images/Admyn-Screenshot.png'
 import checkoutScreenshot from '../../public/images/Checkout.png'
-import visa from '../../public/images/visa.svg'
-import masterCard from '../../public/images/masterCard.svg'
-import gPay from '../../public/images/googlePay-white.svg'
-import aPay from '../../public/images/applePay-white.svg'
 import CTA from '../components/cta/cta'
 import FAQs from '../components/faqs/faqs'
 import Head from 'next/head';
@@ -28,9 +24,13 @@ export default async function Home() {
   const data = response.data;
   const attributes = data.attributes;
   const hero = attributes.hero;
-  const images = attributes.images;
+  const desktop = attributes.images?.desktop?.data?.attributes;
+  const mobile = attributes.images?.mobile?.data?.attributes;
+  const paymentMethods = attributes.paymentMethods?.paymentMethod;
   const section1 = attributes.section1;
   const section2 = attributes.section2;
+
+  console.log(desktop, mobile)
 
   return (
     <>
@@ -64,26 +64,37 @@ export default async function Home() {
             </div>
             <div className={styles.imageWrapper}>
               <div className={styles.imageContainer}>
-                <Image className={styles.admynScreenshot} alt="Admyn Screenshot" src={admynScreenshot} />
-                <Image className={styles.checkoutScreenshot} alt="Checkout Screenshot" src={checkoutScreenshot} />
+                <Image
+                  className={styles.admynScreenshot}
+                  alt={desktop.alternativeText}
+                  src={desktop.url}
+                  width='1000'
+                  height='565'
+                />
+                <Image
+                  className={styles.checkoutScreenshot}
+                  alt={mobile.alternativeText}
+                  src={mobile.formats.medium.url}
+                  width='371'
+                  height='750'
+                />
               </div>
             </div>
 
             <div className={styles.logoWrapper}>
               <div className={styles.logoContainer}>
-                <div className={styles.pspLogoWrapper}>
-                  <Image className={styles.pspLogo} alt="Visa Logo" src={visa} />
-                </div>
-                <div className={styles.pspLogoWrapper}>
-                  <Image className={styles.pspLogo} alt="MasterCard Logo" src={masterCard} />
-                </div>
-                <div className={styles.pspLogoWrapper}>
-                  <Image className={styles.pspLogo} alt="Apply Pay Logo" src={aPay} />
-                </div>
-                <div className={styles.pspLogoWrapper}>
-                  <Image className={styles.pspLogo} alt="Google Pay Logo" src={gPay} />
-                  <span className={styles.comingSoon}>Coming Soon</span>
-                </div>
+                {paymentMethods.map((payMeth: any) => {
+                  const logo = payMeth.logo?.data?.attributes;
+                  const width = 100
+                  const height = 50
+
+                  return (
+                    <div key={payMeth.id} className={styles.pspLogoWrapper}>
+                      <Image width={width} height={height} className={styles.pspLogo} alt={payMeth.title + " Logo"} src={logo.url} />
+                      {payMeth.comingSoon && <span className={styles.comingSoon}>Coming Soon</span>}
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -147,7 +158,7 @@ export default async function Home() {
               {section2?.usps.map((usp: any) => {
                 const width = 35;
                 const height = 35;
-                const icon = usp.icon?.data.attributes;
+                const icon = usp.icon?.data?.attributes;
                 console.log(usp.icon.data)
 
                 return (
