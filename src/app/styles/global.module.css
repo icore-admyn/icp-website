@@ -13,6 +13,10 @@
     gap: 80px;
 }
 
+.paddingTop40 {
+    padding-top: 40px;
+}
+
 .flex {
     display: flex;
 }
@@ -176,6 +180,11 @@
     transform: none;
 }
 
+.accordionButton>h2 {
+    font-size: 24px;
+    margin: 0px;
+}
+
 .accordionButton>h3 {
     font-size: 24px;
     margin: 0px;
@@ -313,6 +322,8 @@
 .spaceBetween {
     justify-content: space-between;
 }
+
+
 
 
 @media (max-width: 768px) {

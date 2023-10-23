@@ -6,7 +6,7 @@ import Link from 'next/link';
 import admynScreenshot from '../../public/images/Admyn-Screenshot.png'
 import checkoutScreenshot from '../../public/images/Checkout.png'
 import CTA from '../components/cta/cta'
-import FAQs from '../components/faqs/faqs'
+import FAQs from '../components/faqs'
 import Head from 'next/head';
 import dotenv from 'dotenv';
 dotenv.config();

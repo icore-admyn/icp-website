@@ -3,7 +3,7 @@ import globalStyles from '../styles/global.module.css'
 import classNames from 'classnames';
 import Image from 'next/image';
 import CTA from '../../components/cta/cta'
-import FAQs from '../../components/faqs/faqs'
+import FAQs from '../../components/faqs'
 import dotenv from 'dotenv';
 dotenv.config();
 

@@ -3,7 +3,7 @@ import styles from './faqs.module.css'
 import globalStyles from '../styles/global.module.css'
 import classNames from 'classnames';
 import CTA from '../../components/cta/cta'
-import AccordionItem from '../../components/faqs/accordionH2'
+import FAQS from '../../components/faqs'
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -35,23 +35,7 @@ export default async function AboutUs() {
         </section>
       </header>
       <main>
-        <section className={styles.faqs}>
-          <div className={globalStyles.container}>
-            <div className={classNames(
-              globalStyles.accordion,
-              globalStyles.marginTop60
-            )}>
-              {data.map((item: { attributes: any; id: any; }): any => {
-                const accordionData = item.attributes;
-                return (
-                  <div key={item.id} className={styles.accordion}>
-                    <AccordionItem title={accordionData.question} content={accordionData.response} />
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
+        <FAQS heading={'h2'}/>
         <CTA />
       </main>
     </>

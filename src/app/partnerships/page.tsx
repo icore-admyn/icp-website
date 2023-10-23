@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import text from '../homepage.json'
 import Image from 'next/image';
 import CTA from '../../components/cta/cta'
-import FAQs from '../../components/faqs/faqs'
+import FAQs from '../../components/faqs'
 
 export default function AboutUs() {
   return (
