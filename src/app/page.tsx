@@ -34,6 +34,9 @@ export default async function Home() {
 
   return (
     <>
+    <Head>
+      <title>iCore Pay | Instant & Secure Permissionless Payments</title>
+    </Head>
       <header>
         <section>
           <div className={globalStyles.container}>
